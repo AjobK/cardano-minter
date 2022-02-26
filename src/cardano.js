@@ -5,13 +5,13 @@ const path = require("path");
 const dir = path.join(os.homedir(), "projects/cardano-minter");
 const shelleyPath = path.join(
   os.homedir(),
-  "mainnet-relay",
-  "mainnet-shelley-genesis.json"
+  "testnet-shelley-genesis.json"
 );
 
+// Change to mainnet for mainnet minting
 const cardanocliJs = new CardanocliJs({
 //   era: "mary",
-  network: `mainnet`,
+  network: `testnet`,
   dir,
   shelleyGenesisPath: shelleyPath,
 });
